@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperHero Finder</title>
+
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- CSS personal -->
+  <link rel="stylesheet" href="assets/CSS/style.css" />
+</head>
+
+<body class="d-flex justify-content-center align-items-center min-vh-100">
+
+  <div class="container text-center" style="max-width: 1000px;">
+
+    <!-- Header con el logo personalizado -->
+    <header>
+      <img src="assets/images/title.png" alt="SuperHero Finder" class="img-fluid mb-4" style="max-width: 850px;" />
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+
+      <!-- Sección de la barra de búsqueda -->
+      <section aria-labelledby="search-label">
+        <form id="search-form" class="row g-3 mb-3">
+          <div class="col-md-10">
+            <label for="search-input" class="visually-hidden" id="search-label">Search by name</label>
+            <input type="text" id="search-input" class="form-control" placeholder="Search for a superhero by name..." />
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-danger w-100">Search</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Botón para abrir y cerrar los filtros -->
+      <section class="mb-3">
+        <button class="btn btn-outline-danger w-100" type="button" data-bs-toggle="collapse"
+          data-bs-target="#filters-collapse" aria-expanded="false" aria-controls="filters-collapse">
+          Filtering Options
+        </button>
+      </section>
+
+      <!-- Sección con cada filtro -->
+      <section class="collapse mb-4" id="filters-collapse" aria-labelledby="filter-heading">
+        <h2 id="filter-heading" class="visually-hidden">Filters</h2>
+        <form id="filter-form" class="row g-3">
+
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="gender-select" class="form-label">Gender</label>
+              <select id="gender-select" class="form-select">
+                <option value="">Any</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="hair-color" class="form-label">Hair Color</label>
+              <input type="text" id="hair-color" class="form-control" placeholder="Black, Blonde, etc." />
+            </div>
+
+            <div class="mb-3">
+              <label for="min-weight" class="form-label">Min Weight (kg)</label>
+              <input type="number" id="min-weight" class="form-control" placeholder="0-1000 kg" min="0" max="1000" />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="race-select" class="form-label">Race</label>
+              <input type="text" id="race-select" class="form-control" placeholder="Human, Kryptonian, etc." />
+            </div>
+
+            <div class="mb-3">
+              <label for="eye-color" class="form-label">Eye Color</label>
+              <input type="text" id="eye-color" class="form-control" placeholder="Blue, Red, etc." />
+            </div>
+
+            <div class="mb-3">
+              <label for="min-height" class="form-label">Min Height (cm)</label>
+              <input type="number" id="min-height" class="form-control" placeholder="0-1000 cm" min="0" max="1000" />
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Sección de resultados -->
+      <section id="results" class="row g-4" aria-label="Search Results"></section>
+    </main>
+
+    <!-- Footer con mi nombre -->
+    <footer class="mt-4">
+      <p class="text-muted small">&copy; 2025 SuperHero Finder by Diego Martínez</p>
+    </footer>
+
+  </div>
+
+  <!-- Referencia JS personal -->
+  <script src="assets/js/script.js"></script>
+  <!-- Referencia JS de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

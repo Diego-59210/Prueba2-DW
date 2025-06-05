@@ -1,0 +1,62 @@
+/* Color oscuro semi transparente sobre la imagen de fondo*/
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+/* Establecer la imagen de fondo */
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Estilizar el contenedor principal */
+.container {
+    background-color: rgb(247, 215, 87);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+/* Estilo para cada carta */
+.hero-detail-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero-detail-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para la imagen de la carta */
+.hero-image {
+    flex: 1 1 200px;
+    max-width: 250px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para la info de la carta */
+.hero-info {
+    flex: 2 1 400px;
+}
+
+.hero-info p {
+    margin: 6px 0;
+}
